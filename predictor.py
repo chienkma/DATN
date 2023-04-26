@@ -72,11 +72,11 @@ def derive_clean_sheet(src):
 
 # Data gathering
 
-en_data_folder = "english-premier-league_zip"
-es_data_folder = "spanish-la-liga_zip"
-fr_data_folder = "french-ligue-1_zip"
-ge_data_folder = "german-bundesliga_zip"
-it_data_folder = "italian-serie-a_zip"
+en_data_folder = "english-premier-league"
+es_data_folder = "spanish-la-liga"
+fr_data_folder = "french-ligue-1"
+ge_data_folder = "german-bundesliga"
+it_data_folder = "italian-serie-a"
 
 # data_folders = [es_data_folder]
 data_folders = [
@@ -87,15 +87,13 @@ data_folders = [
     it_data_folder,
 ]
 
-season_range = (9, 18)
+season_range = (13, 22)
 
 data_files = []
 for data_folder in data_folders:
     for season in range(season_range[0], season_range[1] + 1):
         data_files.append(
-            "data/{}/data/season-{:02d}{:02d}_csv.csv".format(
-                data_folder, season, season + 1
-            )
+            "data/{}/data/season-{:02d}.csv".format(data_folder, season, season + 1)
         )
 
 data_frames = []

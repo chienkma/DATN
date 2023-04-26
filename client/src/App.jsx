@@ -1,16 +1,11 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header";
-import NewsList from "./pages/newList";
-import Standings from "./pages/standings";
-
+import Home from "./pages/Home/Home";
 function App() {
   return (
     <div>
-      <Header />
-      <NewsList />
-      <Standings />
+      <Home />
     </div>
   );
 }
